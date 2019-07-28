@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 const { default: Pinner } = require('../lib');
 const { config } = require('dotenv');
+const debug = require('debug').default;
+
+const logMonitor = debug('pinion-monitor:log');
+const logError = debug('pinion-monitor:fault');
 
 if (process.env.NODE_ENV !== 'production') config();
 
@@ -26,10 +30,11 @@ const pinner = new Pinner(room, {
 pinner
   .start()
   .then(() => {
-    console.info(`Pinner started in room ${room}`);
+    logMonitor(`Started in room ${room}`);
   })
   .catch(caughtError => {
-    console.error(caughtError);
-    console.error('Pinion crashed. Exiting...');
+    logError('CRASHED!');
+    logError('Exiting...');
+    logError(caughtError);
     process.exit(1);
   });
