@@ -1,0 +1,8 @@
+{
+    "linters": {
+        "src/**/*.ts": [
+            "eslint --fix",
+            "git add"
+        ]
+    }
+}
