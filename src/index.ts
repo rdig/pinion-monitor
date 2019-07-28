@@ -1,1 +1,1 @@
-export { default } from './Pinion';
+export { default } from './PinionMonitor';
