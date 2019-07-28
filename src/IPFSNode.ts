@@ -1,11 +1,3 @@
-/**
- * @file IPFSNode A little abstraction around IPFS to make debugging and error
- * handling easier. It also handles the pubsub subscriptions for us as well as
- * the room peer handling.
- */
-
-import { cid } from 'is-ipfs';
-
 import IPFS = require('ipfs');
 import EventEmitter = require('events');
 import debug = require('debug');
@@ -82,7 +74,7 @@ class IPFSNode {
     if (to) {
       customTypeLogger(to);
     }
-    customTypeLogger(payload);
+    customTypeLogger('%o', payload);
   };
 
   private handleNewPeer = (peer: string): void => {

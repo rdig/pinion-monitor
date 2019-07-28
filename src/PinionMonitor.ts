@@ -1,16 +1,10 @@
 import assert = require('assert');
 import debug = require('debug');
 import EventEmitter = require('events');
-import { Entry } from 'ipfs-log';
-
-import IPFS from 'ipfs';
-
-import { ClientActions, PinnerActions } from './actions';
 
 import IPFSNode from './IPFSNode';
 
 const logMonitor = debug('pinion-monitor:log');
-const logError = debug('pinion-monitor:error');
 
 interface Options {
   ipfsPrivateKey?: string;
