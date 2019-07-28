@@ -1,6 +1,6 @@
 {
   "name": "pinion-monitor",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Clandestinely monitor for pubsub messages in a certain room",
   "bin": {
     "pinion": "bin/index.js"
