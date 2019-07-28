@@ -16,10 +16,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc -p tsconfig.prod.json",
-    "test": "ava",
     "lint": "tsc --noEmit && eslint --fix --ext ts src types",
-    "start": "yarn build && bin/index.js",
-    "test:ci": "yarn test --tap | tap-xunit > reports/ava/ava-results.xml"
+    "start": "DEBUG='pinion-monitor:*' yarn build && bin/index.js"
   },
   "keywords": [
     "ipfs",

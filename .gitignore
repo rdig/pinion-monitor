@@ -12,3 +12,6 @@ ipfs-test-data
 
 ### tsc output
 lib
+
+### production config
+ipfsConfig.production.json
