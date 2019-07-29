@@ -5,6 +5,7 @@ yarn-error.log
 
 ### IPFS node data
 ipfs
+!types/ipfs
 
 ### orbit node data
 orbitdb*
